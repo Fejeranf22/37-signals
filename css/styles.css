@@ -12,8 +12,7 @@ a {
 	text-decoration: none;
 }
 
-header,
-section {
+header section {
 	display: block;
 	margin: 30px auto;
 	width: 825px;
@@ -366,4 +365,35 @@ footer p {
 	font-size: 10px;
 	color: #999999;
 	margin-top: 50px;
+}
+@media screen and (max-width: 480px) {
+	*{
+		display: block;
+		text-align: center;
+		float:none;
+	}
+	ul nav{
+		display:none;
+	}
+	nav{
+		display: none;
+	}
+	title{
+		display: none;
+	}
+	header{
+		text-align: center;
+		display: block;
+		margin: 50px;
+	}
+	#products{
+	margin: center;}
+	#author{
+		margin: 50px;
+	}
+#quotes{
+	margin: 100px;
+}
+
+
 }
