@@ -12,7 +12,8 @@ a {
 	text-decoration: none;
 }
 
-header section {
+header,
+section {
 	display: block;
 	margin: 30px auto;
 	width: 825px;
@@ -31,7 +32,6 @@ header > h1,
 	margin: 20px 0;
 	text-align: center;
 }
-
 
 hr {
 	background: white url('../img/img-hr.png') no-repeat 50%;
@@ -152,7 +152,7 @@ header > h2 {
 }
 
 .meet a {
-	background: url('../img/img-customers.png');
+	background: url("../img/img-customers.png");
 	display: block;
 	height: 104px;
 	text-indent: -1000px;
@@ -196,7 +196,7 @@ header > h2 {
 #manifesto .column-end {
 	color: #222222;
 	float: left;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 18px;
 	height: 385px;
 	line-height: 27px;
@@ -366,34 +366,177 @@ footer p {
 	color: #999999;
 	margin-top: 50px;
 }
-@media screen and (max-width: 480px) {
-	*{
-		display: block;
-		text-align: center;
-		float:none;
-	}
-	ul nav{
-		display:none;
-	}
-	nav{
+/********************************************************************************/
+/*the media query section*/
+/*the max-widthis 1200px*/
+@media screen and (max-width: 1200px) {
+	.meet,
+	.arrow-left,
+	.customers > img,
+	.crumple,
+	.arrow-right,
+	#customers > img {
 		display: none;
 	}
-	title{
+	header,
+	section {
+		width:90%;
+	}
+	header h1 {
+		font-size: 42px;
+		line-height: 42px;
+		margin: 0 5%;
+	}
+	#customers h1,
+	#manifesto h1,
+	#rework h1,
+	#offerings h1 {
+		font-size: 32px;
+		line-height: 32px;
+	}
+	#products div:first-child {
+	margin-left: 10%;
+	}
+	#customers h1 {
+		padding: 0 0 20px 0;
+	}
+	#manifesto,
+	#manifesto .column,
+	#manifesto .column-end{
+		height: 325px;
+	}
+	#manifesto .chapter {
 		display: none;
 	}
-	header{
-		text-align: center;
+	#offerings .column small,
+	#offerings .column-end small {
+		font-size: 10px;
+	}
+}
+/*} the end of max width queries 1200 px*/
+
+/*start of the media q 1050 px*/
+@media screen and (max-width: 1050px){
+	#products div:first-child {
+		margin-left: 7%;
+	}
+	#pruducts p {
+		font-size: 12px;
+	}
+	#customers p {
+		line-height: 26px;
+	}
+	.quotes h3 {
+		font-size: 18px;
+	}
+	#manifesto {
+		height: 400px;
+	}
+	#manifesto p {
+		height: 50px;
+	}
+}
+/*the end of the max 1050************************************/
+
+/*the start of 900 medis queries*/
+@media screen and (max-width: 900px){
+	header {
+		margin-bottom: 0;
+	}
+	header h1 {
+		font-size: 36px;
+		line-height: 36px;
+	}
+	#products div {
+		box-sizing: border-box;
+		display: inline-block;
+		float: none;
+		margin: 2% 1%;
+		padding: 15px 20px;
+		width: 27%;
+	}
+	#products div:first-child {
+		margin-left: 0;
+	}
+	.column,
+	.column-end {
+		float: none;
+		width: 75%;
+		margin: 0 auto;
+	}
+	.column-end div:first-child {
+		clear: left;
+	}
+	#customers p {
+		font-size: 18px;
+	}
+	#manifesto,
+	#manifesto + hr,
+	#rework + hr {
+		display: none;
+	}
+	.rework,
+	.offerings {
+		display: none;
+	}
+}
+/*the end of the max 900************************************/
+
+/*start of the 750px media queries*******************/
+@media screen and (max-width: 750px){
+	#offerings {
+		display: none;
+	}
+	.quotes div {
+		font-size: 16px;
+	}
+}
+/*the end of the max 750px___************************************/
+
+/*start max width of 700px*/
+@media screen and (max-width: 700px){
+	nav ul {
+		padding: 0;
+	}
+	#products {
+		height: auto;
+	}
+	#products div {
 		display: block;
-		margin: 50px;
+		margin: 10px auto !important;
+		width: 50%;
 	}
-	#products{
-	margin: center;}
-	#author{
-		margin: 50px;
+}
+/*the end of the max-700************************************/
+
+/*start max width of 600px*/
+@media screen and (max-width: 600px){
+	#customers h1,
+	#manifesto h1,
+	#rework h1,
+	#offerings h1 {
+		font-size: 24px;
 	}
-#quotes{
-	margin: 100px;
+	head h1 {
+		font-size: 28px;
+		line-height: 28px;
+	}
+	header h2 {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	#rework {
+		height: auto;
+	}
+	.book {
+		float: none;
+		text-align: center;
+	}
+	.quotes div {
+		margin-top: 0;
+	}
+	.quotes p {
+		margin-bottom: 15px;
+	}
 }
-
-
-}
+/*the end of the max 600************************************/
